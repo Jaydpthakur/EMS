@@ -1,0 +1,60 @@
+<style>
+  .btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius:8px;
+    font-weight:bold;
+  }
+  
+  .btn {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  
+  .btn:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+</style>
+
+<body bgcolor="lavender">
+    <form action="">
+      
+    <div style="text-align:center; padding:30px; font-family:verdana; width:800px; height:600px; border:2px solid black; margin:auto; background-color:yellow;">
+      <h2>{{msg}}</h2>
+    <div style="margin-bottom:60px; font-size:20px;">
+    <h1>ADMIN PANEL </h1>
+    New to App?
+    <a href="{% url 'asignup' %}" class='btn'>Signup</a>
+    <br><br>
+    Already have an account? 
+    <a href="{% url 'alogin' %}" class='btn'>LOGIN</a>
+    </div>
+
+
+
+    <hr size="5" color="blue"/>
+
+
+
+    <div style="margin-top:70px; font-size:20px;">
+      <h1>USER PANEL </h1>
+      New to App?
+      <a href="{% url 'usignup' %}" class='btn'>Signup</a>
+        <br><br>
+    Already have an account? 
+    <a href="{% url 'ulogin' %}" class='btn'>LOGIN</a>
+      </div>
+    </div>
+  
+  </form>

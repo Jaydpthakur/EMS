@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Form</title>
+</head>
+<style>
+    button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 15px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      border-radius:8px;
+      font-weight:bold;
+      margin-left:150px;
+    }
+    
+    button {
+      background-color: white; 
+      color: black; 
+      border: 2px solid #4CAF50;
+    }
+    
+    button:hover {
+      background-color: #4CAF50;
+      color: white;
+    }
+    #box{
+        margin-bottom:50px;
+        width:70%;
+        border:2px solid black;
+        border-radius:8px;
+        background-color:yellow;
+
+    }
+   
+</style>
+<body bgcolor="lavender" style="font-family:verdana;text-align:center;">
+    
+    <center>
+        <h2>{{msg}}</h2>
+        <div id=box>
+        <h1>Query Form</h1>
+        <form action="{% url 'enquiryinsert' %}" method="post">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td>
+                        Student Name:
+                    </td>
+                
+                    <td>
+                        <input type="text" name="sname" required>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Contact:
+                    </td>
+                    <td>
+                        <input type="tel" name="contact" required>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email:
+                    </td>
+                    <td>
+                        <input type="email" name="email" required>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="name">Query:</label>
+                        <br>
+                    </td>
+                    <td>
+                        <input type="text" name="enquiry" required>
+                        <br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <br><br>
+                    <td>
+                        
+                        <button type="submit" name="submit" value="Submit">Submit
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</div>
+</body>
+</html>
